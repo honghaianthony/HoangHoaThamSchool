@@ -1,0 +1,86 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import ThemeToggle from "./Toggle";
+import { Icon } from "astro-icon";
+
+import "@fontsource/fresca";
+
+export interface Props {
+    logo?: string;
+}
+
+const { logo = "/assets/logo/logo.png" } = Astro.props;
+---
+
+<header>
+    <nav
+        class="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 bg-white dark:bg-black shadow"
+    >
+        <div
+            class="container px-4 mx-auto flex flex-wrap items-center justify-between"
+        >
+            <div
+                class="w-full flex relatived justify-between lg:w-auto lg:static lg:justify-start lg:block"
+            >
+                <a href="/" class="flex items-center">
+                    <img
+                        src={logo}
+                        width={30}
+                        height={30}
+                        alt="Anthony Hai Logo"
+                    />
+                    <span class="px-2 fresca text-black dark:text-white"
+                        >AnthonyHai</span
+                    >
+                </a>
+            </div>
+            <div class="lg:flex flex-grow items-center lg:shadow-none">
+                <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+                    <li
+                        class="flex items-center px-3 lg:text-black lg:dark:text-white hover:text-white hover:bg-slate-800 hover:py-1 hover:rounded-lg hover:transition-all cursor-pointer text-xs"
+                    >
+                        <HeaderLink href="/">Trang chủ</HeaderLink>
+                    </li>
+                    <li
+                        class="flex items-center px-3 lg:text-black lg:dark:text-white hover:text-white hover:bg-slate-800 hover:py-1 hover:rounded-lg hover:transition-all cursor-pointer text-xs"
+                    >
+                        <HeaderLink href="/">Cơ cấu tổ chức</HeaderLink>
+                    </li>
+                    <li
+                        class="flex items-center px-3 lg:text-black lg:dark:text-white hover:text-white hover:bg-slate-800 hover:py-1 hover:rounded-lg hover:transition-all cursor-pointer text-xs"
+                    >
+                        <HeaderLink href="/">Tin tức</HeaderLink>
+                    </li>
+                    <li
+                        class="flex items-center px-3 lg:text-black lg:dark:text-white hover:text-white hover:bg-slate-800 hover:py-1 hover:rounded-lg hover:transition-all cursor-pointer text-xs"
+                    >
+                        <HeaderLink href="/">Về tôi</HeaderLink>
+                    </li>
+                    <li
+                        class="flex items-center px-3 lg:text-black lg:dark:text-white cursor-pointer text-xs"
+                    >
+                        <ThemeToggle client:load />
+                    </li>
+                    <li
+                        class="flex items-center px-3 lg:text-black lg:dark:text-white cursor-pointer text-xs"
+                    >
+                        <Icon size={16} pack="akar-icons" name="github-fill" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<style>
+    .fresca {
+        font-family: "Fresca", sans-serif;
+    }
+    #text-hover-gradient:hover li {
+        background: linear-gradient(
+            111.53deg,
+            #bc1b42 29.93%,
+            rgba(221, 197, 203, 0) 63.12%
+        );
+    }
+</style>
