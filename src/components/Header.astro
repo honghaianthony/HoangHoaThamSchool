@@ -2,6 +2,7 @@
 import HeaderLink from "./HeaderLink.astro";
 import ThemeToggle from "./Toggle";
 import { Icon } from "astro-icon";
+import { Image } from "@astrojs/image/components";
 
 import "@fontsource/fresca";
 
@@ -9,21 +10,17 @@ export interface Props {
     logo?: string;
 }
 
-const { logo = "/assets/logo/logo.png" } = Astro.props;
+const { logo = "/assets/logo/logo2x.png" } = Astro.props;
 ---
 
 <header>
     <nav
-        class="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 bg-white dark:bg-black shadow"
+        class="sticky top-0 w-full text-white py-6 z-10 bg-white dark:bg-black shadow"
     >
-        <div
-            class="container px-4 mx-auto flex flex-wrap items-center justify-between"
-        >
-            <div
-                class="w-full flex relatived justify-between lg:w-auto lg:static lg:justify-start lg:block"
-            >
+        <div class="flex justify-between max-w-screen-xl mx-auto">
+            <div class="flex items-center space-x-28">
                 <a href="/" class="flex items-center">
-                    <img
+                    <Image
                         src={logo}
                         width={30}
                         height={30}
@@ -34,35 +31,35 @@ const { logo = "/assets/logo/logo.png" } = Astro.props;
                     >
                 </a>
             </div>
-            <div class="lg:flex flex-grow items-center lg:shadow-none">
-                <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+            <div class="flex items-center space-x-14">
+                <ul class="flex space-x-4">
                     <li
-                        class="flex items-center px-3 lg:text-black lg:dark:text-white hover:text-white hover:bg-slate-800 hover:py-1 hover:rounded-lg hover:transition-all cursor-pointer text-xs"
+                        class="flex items-center px-3 lg:text-black lg:dark:text-white hover:text-white hover:bg-slate-800 hover:py-1 hover:rounded-lg hover:transition-all cursor-pointer text-sm"
                     >
                         <HeaderLink href="/">Trang chủ</HeaderLink>
                     </li>
                     <li
-                        class="flex items-center px-3 lg:text-black lg:dark:text-white hover:text-white hover:bg-slate-800 hover:py-1 hover:rounded-lg hover:transition-all cursor-pointer text-xs"
+                        class="flex items-center px-3 lg:text-black lg:dark:text-white hover:text-white hover:bg-slate-800 hover:py-1 hover:rounded-lg hover:transition-all cursor-pointer text-sm"
                     >
                         <HeaderLink href="/">Cơ cấu tổ chức</HeaderLink>
                     </li>
                     <li
-                        class="flex items-center px-3 lg:text-black lg:dark:text-white hover:text-white hover:bg-slate-800 hover:py-1 hover:rounded-lg hover:transition-all cursor-pointer text-xs"
+                        class="flex items-center px-3 lg:text-black lg:dark:text-white hover:text-white hover:bg-slate-800 hover:py-1 hover:rounded-lg hover:transition-all cursor-pointer text-sm"
                     >
                         <HeaderLink href="/">Tin tức</HeaderLink>
                     </li>
                     <li
-                        class="flex items-center px-3 lg:text-black lg:dark:text-white hover:text-white hover:bg-slate-800 hover:py-1 hover:rounded-lg hover:transition-all cursor-pointer text-xs"
+                        class="flex items-center px-3 lg:text-black lg:dark:text-white hover:text-white hover:bg-slate-800 hover:py-1 hover:rounded-lg hover:transition-all cursor-pointer text-sm"
                     >
                         <HeaderLink href="/">Về tôi</HeaderLink>
                     </li>
                     <li
-                        class="flex items-center px-3 lg:text-black lg:dark:text-white cursor-pointer text-xs"
+                        class="flex items-center px-3 lg:text-black lg:dark:text-white cursor-pointer text-sm"
                     >
                         <ThemeToggle client:load />
                     </li>
                     <li
-                        class="flex items-center px-3 lg:text-black lg:dark:text-white cursor-pointer text-xs"
+                        class="flex items-center px-3 lg:text-black lg:dark:text-white cursor-pointer text-sm"
                     >
                         <Icon size={16} pack="akar-icons" name="github-fill" />
                     </li>

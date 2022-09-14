@@ -1,0 +1,90 @@
+---
+import "@fontsource/arvo";
+import MacOS from "./MacOS";
+---
+
+<section class="py-20 bg-white dark:bg-black">
+    <div class="max-w-screen-xl mx-auto space-y-12">
+        <div class="flex space-x-24 text-black dark:text-white">
+            <div class="flex w-1/2">
+                <div class="flex flex-col space-y-4">
+                    <h1 class="text-2xl arvo font-bold">
+                        Môi trường <span class="text-[#23B681]"
+                            >năng động - trẻ trung</span
+                        >
+                    </h1>
+                    <p class="arvo block">
+                        Đến với THPT Hoàng Hoa Thám, bạn sẽ thỏa sức đam mê
+                        không giới hạn của mình
+                    </p>
+                </div>
+            </div>
+            <div class="relative w-1/2">
+                <MacOS title="Kyyeu.exe">
+                    <img src="/assets/intro/active.png" alt="Activity 1" />
+                </MacOS>
+            </div>
+        </div>
+        <div class="flex space-x-24 text-black dark:text-white">
+            <div class="flex w-1/2">
+                <MacOS title="Giaovien.exe">
+                    <img src="/assets/intro/active1.png" alt="Activity 2" />
+                </MacOS>
+            </div>
+            <div class="relative w-1/2">
+                <div class="flex flex-col space-y-4">
+                    <h1 class="text-2xl arvo font-bold">
+                        Đội ngũ giáo viên <span class="text-[#EA4B19]"
+                            >giỏi - nhiệt huyết</span
+                        >
+                    </h1>
+                    <p class="arvo block">
+                        Đội ngũ giáo viên với nhiều năm kinh nghiệm giảng dạy
+                        nhiều khóa sẽ mang đến cho các bạn một kiến thức vô cùng
+                        vững chắc
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="flex space-x-24 text-black dark:text-white">
+            <div class="flex w-1/2">
+                <div class="flex flex-col space-y-4">
+                    <h1 class="text-2xl arvo font-bold">
+                        Tham gia nhiều <span class="text-[#F3B30E]"
+                            >sự kiện</span
+                        >
+                    </h1>
+                    <p class="arvo block">
+                        Với xu hướng hòa nhập trường học 4.0, việc tham gia
+                        nhiều sự kiện sẽ giúp học sinh có những kỹ năng mềm cần
+                        thiết
+                    </p>
+                </div>
+            </div>
+            <div class="relative w-1/2">
+                <MacOS title="Toadam.exe">
+                    <div class="window-frame">
+                        <img src="/assets/intro/active2.png" alt="Activity 3" />
+                    </div>
+                </MacOS>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .window-frame {
+        width: 560px;
+        height: 312px;
+        background-color: #282828;
+        border-radius: 0 0 14px 14px;
+    }
+    .window-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .arvo {
+        font-family: "Arvo", serif;
+    }
+</style>

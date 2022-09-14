@@ -1,0 +1,61 @@
+---
+import { Icon } from "astro-icon";
+import { Image } from "@astrojs/image/components";
+import "@fontsource/arvo";
+---
+
+<section
+    class="pb-12 bg-white dark:bg-black shadow dark:border-b dark:border-slate-100"
+>
+    <div class="max-w-screen-xl mx-auto space-y-5">
+        <h1 class="arvo text-black dark:text-white">Với sự hỗ trợ của</h1>
+        <div class="flex items-center space-x-24 justify-between">
+            <div
+                class="flex rounded-xl w-[194px] h-[105px] bg-support items-center border"
+            >
+                <Image
+                    src="/assets/supporter/astro.png"
+                    width={92}
+                    height={46}
+                    alt="Astro"
+                    class="mx-auto"
+                />
+            </div>
+            <div
+                class="flex rounded-xl w-[194px] h-[105px] bg-support items-center border"
+            >
+                <Image
+                    src="/assets/supporter/tailwind.png"
+                    width={150}
+                    height={19}
+                    alt="TailwindCss"
+                    class="mx-auto"
+                />
+            </div>
+            <div
+                class="flex rounded-xl w-[194px] h-[105px] bg-support items-center border"
+            >
+                <Image
+                    src="/assets/supporter/supabase.png"
+                    width={150}
+                    height={29}
+                    alt="Supabase"
+                    class="mx-auto"
+                />
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .bg-support {
+        background: linear-gradient(
+            111.53deg,
+            #bc1b42 29.93%,
+            rgba(221, 197, 203, 0) 63.12%
+        );
+    }
+    .arvo {
+        font-family: "Arvo", serif;
+    }
+</style>

@@ -1,0 +1,81 @@
+---
+import "@fontsource/arvo";
+import { Image } from "@astrojs/image/components";
+export interface Props {
+    title?: string;
+    slogan?: string;
+    subTitle?: string;
+    author?: string;
+}
+
+const {
+    title = "THPT HOÀNG HOA THÁM - ",
+    slogan = "NƠI ƯƠM MẦM TÀI NĂNG VIỆT",
+    subTitle = "Website chính thức của trường THPT Hoàng Hoa Thám - Khánh Hòa",
+    author = "by Anthony Hai",
+} = Astro.props;
+---
+
+<section class="pt-16 pb-56 bg-white dark:bg-black">
+    <div class="max-w-screen-xl mx-auto">
+        <div class="flex items-center space-x-24 text-black dark:text-white">
+            <div class="flex w-1/2">
+                <div class="flex flex-col space-y-3">
+                    <h1
+                        class="text-4xl text-black dark:text-white mb-2 arvo uppercase"
+                    >
+                        {title}
+                    </h1>
+                    <h1
+                        class="text-4xl text-black dark:text-white mb-5 arvo uppercase"
+                    >
+                        {slogan}
+                    </h1>
+                    <p class="text-sm text-black dark:text-white arvo">
+                        {subTitle}
+                    </p>
+                    <p class="text-sm text-black dark:text-white arvo">
+                        {author}
+                    </p>
+                </div>
+            </div>
+            <div class="relative w-1/2">
+                <Image
+                    class="mx-auto rounded-3xl shadow-2xl"
+                    src="/assets/background/banner1.jpg"
+                    width={140}
+                    height={250}
+                    alt="Banner"
+                />
+                <div class="flex items-center space-x-32 pt-5">
+                    <Image
+                        src="/assets/background/banner2.jpg"
+                        width={265}
+                        height={170}
+                        alt="Banner"
+                    />
+                    <Image
+                        src="/assets/background/banner3.jpg"
+                        width={271}
+                        height={172}
+                        alt="Banner"
+                        class="-top-12 rotate-[30deg]"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        background-image: url("/assets/background/connection2x.png");
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: right 150px;
+        background-origin: content-box, padding-box;
+    }
+    .arvo {
+        font-family: "Arvo", serif;
+    }
+</style>
