@@ -59,14 +59,70 @@ import MacOS from "./MacOS";
                         nhiều sự kiện sẽ giúp học sinh có những kỹ năng mềm cần
                         thiết
                     </p>
+                    <div
+                        class="bg-event p-5 rounded-lg flex flex-col space-y-2 intro-event fade"
+                    >
+                        <h1 class="font-semibold text-xl">
+                            Hoạt động tọa đàm HSG
+                        </h1>
+                        <p class="text-sm">
+                            Tọa đàm HSG Khánh Hòa ở Vinpearl Condotel Beachfont
+                            Nha Trang
+                        </p>
+                    </div>
+                    <div
+                        class="bg-event p-5 rounded-lg flex flex-col space-y-2 intro-event fade"
+                    >
+                        <h1 class="font-semibold text-xl">Flashmob</h1>
+                        <p class="text-sm">
+                            Flashmob thi đấu giữa các lớp để tìm ra người chiến
+                            thắng
+                        </p>
+                    </div>
+                    <div
+                        class="bg-event p-5 rounded-lg flex flex-col space-y-2 intro-event fade"
+                    >
+                        <h1 class="font-semibold text-xl">
+                            Trải nghiệm làm sinh viên
+                        </h1>
+                        <p class="text-sm">
+                            Hoạt động trải nghiệm làm sinh viên tại trường đại
+                            học trong 1 ngày
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="relative w-1/2">
-                <MacOS title="Toadam.exe">
-                    <div class="window-frame">
-                        <img src="/assets/intro/active2.png" alt="Activity 3" />
-                    </div>
-                </MacOS>
+                <div class="image-event fade">
+                    <MacOS title="Toadam.exe">
+                        <div class="window-frame">
+                            <img
+                                src="/assets/intro/active2.png"
+                                alt="Activity 3"
+                            />
+                        </div>
+                    </MacOS>
+                </div>
+                <div class="image-event fade">
+                    <MacOS title="Flashmob.exe">
+                        <div class="window-frame">
+                            <img
+                                src="/assets/intro/flashmob.jpg"
+                                alt="Activity 3"
+                            />
+                        </div>
+                    </MacOS>
+                </div>
+                <div class="image-event fade">
+                    <MacOS title="Trainghiem.exe">
+                        <div class="window-frame">
+                            <img
+                                src="/assets/intro/trainghiem.jpg"
+                                alt="Activity 3"
+                            />
+                        </div>
+                    </MacOS>
+                </div>
             </div>
         </div>
     </div>
@@ -87,4 +143,85 @@ import MacOS from "./MacOS";
     .arvo {
         font-family: "Arvo", serif;
     }
+    .intro-event {
+        transition: all 300ms;
+    }
+    .image-event {
+        transition: all 300ms;
+    }
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    @-webkit-keyframes fade {
+        from {
+            opacity: 0.4;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: 0.4;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .active {
+        background: linear-gradient(
+            92.23deg,
+            rgba(227, 22, 120, 0.4) 48.12%,
+            rgba(217, 217, 217, 0) 92.77%
+        );
+        transition: all 0.5s ease-in-out;
+    }
 </style>
+
+<script>
+    var imageIndex = 0;
+    ImageSlider();
+
+    function ImageSlider() {
+        var introInfo = document.getElementsByClassName(
+            "intro-event"
+        ) as HTMLCollectionOf<HTMLElement>;
+        var imageEvent = document.getElementsByClassName(
+            "image-event"
+        ) as HTMLCollectionOf<HTMLElement>;
+
+        var i;
+
+        for (i = 0; i < imageEvent.length; i++) {
+            imageEvent[i].style.display = "none";
+        }
+
+        imageIndex++;
+        if (imageIndex > imageEvent.length) {
+            imageIndex = 1;
+        }
+
+        for (i = 0; i < introInfo.length; i++) {
+            introInfo[i].className = introInfo[i].className.replace(
+                " active",
+                ""
+            );
+        }
+
+        for (i = 0; i < imageEvent.length; i++) {
+            imageEvent[imageIndex - 1].style.display = "block";
+            break;
+        }
+
+        for (i = 0; i < introInfo.length; i++) {
+            introInfo[imageIndex - 1].className += " active";
+            break;
+        }
+
+        setTimeout(ImageSlider, 2000);
+    }
+</script>
