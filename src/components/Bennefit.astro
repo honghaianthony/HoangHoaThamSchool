@@ -1,0 +1,119 @@
+---
+import { Image } from "@astrojs/image/components";
+import Icon from "astro-icon";
+import "@fontsource/roboto-flex";
+
+export interface Props {
+    firstBenefit?: string;
+    subFirstBenefit?: string;
+    secondBenefit?: string;
+    subSecondBenefit?: string;
+    thirdBenefit?: string;
+    subThirdBenefit?: string;
+    fourthBenefit?: string;
+    subFourthBenefit?: string;
+}
+
+const {
+    firstBenefit = "Được tiếp thu nhiều kiến thức bổ ích",
+    subFirstBenefit = "Khi vào trường, các bạn sẽ được trang bị nhiều kiến thức bổ ích giúp ích các bạn sau này",
+    secondBenefit = "Đào tạo nhiều học sinh ưu tú",
+    subSecondBenefit = "Trường đã và đang đào tạo nhiều lứa học sinh đạt điểm cao trong kì thi THPTQG",
+    thirdBenefit = "Trường học thân thiện, học sinh tích cực",
+    subThirdBenefit = "Ở trường THPT Hoàng Hoa Thám bạn sẽ được hòa nhập với một môi trường năng động, dồi dào",
+    fourthBenefit = "Dạy học với công nghệ 4.0",
+    subFourthBenefit = "Các lớp của trường được trang bị các Smart TV thuận tiện trong việc giảng dạy bằng Powerpoint",
+} = Astro.props;
+---
+
+<section class="py-20 bg-white dark:bg-black">
+    <div class="max-w-screen-xl mx-auto space-y-12">
+        <h1
+            class="text-3xl text-black dark:text-white mx-auto font-semibold text-center"
+        >
+            Bạn sẽ được gì <span class="text-[#d932df]">khi học ở đây?</span>
+        </h1>
+        <div class="flex space-x-24 text-black dark:text-white items-center">
+            <div class="flex w-1/2">
+                <Image
+                    src="/assets/benefit/benefit_left.jpg"
+                    width={260}
+                    height={430}
+                    alt="Benfit Image"
+                />
+            </div>
+            <div class="relative w-1/2 space-y-8">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex space-x-4">
+                        <Icon size={32} pack="map" name="university" />
+                        <div class="flex flex-col space-y-3">
+                            <h1 class="text-xl roboto-flex font-bold">
+                                {firstBenefit}
+                            </h1>
+                            <p class="sroboto-flex block text-base">
+                                {subFirstBenefit}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-4">
+                    <div class="flex space-x-4">
+                        <Icon
+                            size={32}
+                            pack="healthicons"
+                            name="i-training-class"
+                        />
+                        <div class="flex flex-col space-y-3">
+                            <h1 class="text-xl roboto-flex font-bold">
+                                {secondBenefit}
+                            </h1>
+                            <p class="sroboto-flex block text-base">
+                                {subSecondBenefit}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-4">
+                    <div class="flex space-x-4">
+                        <Icon size={32} pack="fa-solid" name="school" />
+                        <div class="flex flex-col space-y-3">
+                            <h1 class="text-xl roboto-flex font-bold">
+                                {thirdBenefit}
+                            </h1>
+                            <p class="sroboto-flex block text-base">
+                                {subThirdBenefit}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-4">
+                    <div class="flex space-x-4">
+                        <Icon size={32} pack="bi" name="tv" />
+                        <div class="flex flex-col space-y-3">
+                            <h1 class="text-xl roboto-flex font-bold">
+                                {fourthBenefit}
+                            </h1>
+                            <p class="sroboto-flex block text-base">
+                                {subFourthBenefit}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+            url("/assets/benefit/benefit_bg.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    .roboto-flex {
+        font-family: "Roboto Flex", sans-serif;
+    }
+</style>

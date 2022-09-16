@@ -1,0 +1,53 @@
+---
+import { Icon } from "astro-icon";
+import { Image } from "@astrojs/image/components";
+---
+
+<section
+    class="py-20 bg-white dark:bg-black shadow dark:border-b dark:border-slate-100"
+>
+    <div class="max-w-screen-xl mx-auto space-y-12">
+        <div class="flex flex-col space-y-4">
+            <h1
+                class="text-3xl text-black dark:text-white mx-auto font-semibold"
+            >
+                Bạn chưa biết trường ra sao?
+            </h1>
+            <p class="text-xl text-black dark:text-white text-center">
+                Hãy đến với khuôn viên Trường THPT Hoàng Hoa Thám
+            </p>
+        </div>
+        <div class="flex justify-between items-center">
+            <Icon
+                size={128}
+                pack="emojione-monotone"
+                name="school"
+                class="opacity-20 rotate-45 text-white"
+            />
+            <a
+                href="https://www.youtube.com/watch?v=hE346yfB-mI"
+                class="px-8 py-3 rounded-full bg-explore text-black dark:text-white font-semibold"
+                ><button class="transition duration-150 ease-out hover:ease-in"
+                    >Khám phá ngay</button
+                >
+            </a>
+            <Image
+                src="/assets/explore/explore.jpg"
+                width={150}
+                height={225}
+                alt="Explore"
+                class="-rotate-[30deg]"
+            />
+        </div>
+    </div>
+</section>
+
+<style>
+    .bg-explore {
+        background: linear-gradient(
+            101.73deg,
+            rgba(226, 13, 90, 0.7) 41.4%,
+            rgba(203, 135, 160, 0) 82.09%
+        );
+    }
+</style>

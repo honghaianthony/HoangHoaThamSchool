@@ -1,0 +1,110 @@
+---
+import { Image } from "@astrojs/image/components";
+import "@fontsource/roboto-flex";
+---
+
+<section
+    class="py-20 bg-white dark:bg-black dark:border-b dark:border-slate-100"
+>
+    <div class="max-w-screen-xl mx-auto space-y-24">
+        <div class="flex flex-col space-y-4">
+            <h1
+                class="text-3xl text-black dark:text-white text-center font-semibold"
+            >
+                Tham gia vào cộng đồng học sinh
+            </h1>
+            <p class="text-xl text-center text-black dark:text-white">
+                Bạn sẽ nhận được nhiều lời khuyên bổ ích từ cựu học sinh của
+                trường
+            </p>
+        </div>
+        <div class="flex justify-between items-center">
+            <div class="px-3 py-5 rounded-xl bg-community space-y-8 max-w-sm">
+                <div class="flex items-center space-x-4">
+                    <Image
+                        src="/assets/community/ava1.jpg"
+                        width={30}
+                        height={30}
+                        class="rounded-full"
+                        alt="Avatar"
+                    />
+                    <div class="flex flex-col">
+                        <h1
+                            class="font-semibold text-base roboto-flex text-white"
+                        >
+                            Dang Ngo Hong Hai
+                        </h1>
+                        <p class="text-sm roboto-flex text-white">
+                            @anthony.haidang
+                        </p>
+                    </div>
+                </div>
+                <p class="roboto-flex text-white block">
+                    Mình đã học được nhiều điều ở trường không chỉ ở thầy cô mà
+                    còn ở bạn bè
+                </p>
+            </div>
+            <div class="px-3 py-5 rounded-xl bg-community space-y-8 max-w-sm">
+                <div class="flex items-center space-x-4">
+                    <Image
+                        src="/assets/community/ava2.jpg"
+                        width={30}
+                        height={30}
+                        class="rounded-full"
+                        alt="Avatar"
+                    />
+                    <div class="flex flex-col">
+                        <h1
+                            class="font-semibold text-base roboto-flex text-white"
+                        >
+                            Ngoc Quyen
+                        </h1>
+                        <p class="text-sm roboto-flex text-white">
+                            @quyenwinna
+                        </p>
+                    </div>
+                </div>
+                <p class="roboto-flex text-white">
+                    Thầy cô và bạn bè ở đây rất thân thiện và giúp mình trở nên
+                    ngày càng hoàn thiện
+                </p>
+            </div>
+            <div class="px-3 py-5 rounded-xl bg-community space-y-8 max-w-sm">
+                <div class="flex items-center space-x-4">
+                    <Image
+                        src="/assets/community/ava3.jpg"
+                        width={30}
+                        height={30}
+                        class="rounded-full"
+                        alt="Avatar"
+                    />
+                    <div class="flex flex-col">
+                        <h1
+                            class="font-semibold text-base roboto-flex text-white"
+                        >
+                            Hanh Nguyen
+                        </h1>
+                        <p class="text-sm roboto-flex text-white">@jannane</p>
+                    </div>
+                </div>
+                <p class="roboto-flex text-white">
+                    Một ngôi trường mà mọi thứ đều tuyệt vời nhất cho học sinh
+                    như bọn mình!!!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .bg-community {
+        background: linear-gradient(
+            220.23deg,
+            #2c2a2a 19.78%,
+            rgba(182, 40, 194, 0) 87.68%
+        );
+    }
+    .roboto-flex {
+        font-family: "Roboto Flex", sans-serif;
+    }
+</style>
