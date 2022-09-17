@@ -61,7 +61,16 @@ const { logo = "/assets/logo/logo2x.png" } = Astro.props;
                     <li
                         class="flex items-center px-3 lg:text-black lg:dark:text-white cursor-pointer text-sm"
                     >
-                        <Icon size={16} pack="akar-icons" name="github-fill" />
+                        <a href="https://github.com/honghaianthony">
+                            <Icon
+                                size={16}
+                                pack="akar-icons"
+                                name="github-fill"
+                                aria-label="Github"
+                                target="_blank"
+                                rel="noopener"
+                            />
+                        </a>
                     </li>
                 </ul>
             </div>

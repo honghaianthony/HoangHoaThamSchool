@@ -1,6 +1,8 @@
 ---
 import "@fontsource/arvo";
+import "@fontsource/roboto-flex";
 import MacOS from "./MacOS";
+import { Image } from "@astrojs/image/components";
 ---
 
 <section class="py-20 bg-white dark:bg-black">
@@ -8,7 +10,7 @@ import MacOS from "./MacOS";
         <div class="flex space-x-24 text-black dark:text-white">
             <div class="flex w-1/2">
                 <div class="flex flex-col space-y-4">
-                    <h1 class="text-2xl arvo font-bold">
+                    <h1 class="text-2xl roboto-flex font-bold">
                         Môi trường <span class="text-[#23B681]"
                             >năng động - trẻ trung</span
                         >
@@ -21,19 +23,29 @@ import MacOS from "./MacOS";
             </div>
             <div class="relative w-1/2">
                 <MacOS title="Kyyeu.exe">
-                    <img src="/assets/intro/active.png" alt="Activity 1" />
+                    <Image
+                        src="/assets/intro/active.png"
+                        alt="Activity 1"
+                        width={560}
+                        height={312}
+                    />
                 </MacOS>
             </div>
         </div>
         <div class="flex space-x-24 text-black dark:text-white">
             <div class="flex w-1/2">
                 <MacOS title="Giaovien.exe">
-                    <img src="/assets/intro/active1.png" alt="Activity 2" />
+                    <Image
+                        src="/assets/intro/active1.png"
+                        alt="Activity 2"
+                        width={560}
+                        height={312}
+                    />
                 </MacOS>
             </div>
             <div class="relative w-1/2">
                 <div class="flex flex-col space-y-4">
-                    <h1 class="text-2xl arvo font-bold">
+                    <h1 class="text-2xl roboto-flex font-bold">
                         Đội ngũ giáo viên <span class="text-[#EA4B19]"
                             >giỏi - nhiệt huyết</span
                         >
@@ -49,7 +61,7 @@ import MacOS from "./MacOS";
         <div class="flex space-x-24 text-black dark:text-white">
             <div class="flex w-1/2">
                 <div class="flex flex-col space-y-4">
-                    <h1 class="text-2xl arvo font-bold">
+                    <h1 class="text-2xl roboto-flex font-bold">
                         Tham gia nhiều <span class="text-[#F3B30E]"
                             >sự kiện</span
                         >
@@ -96,9 +108,11 @@ import MacOS from "./MacOS";
                 <div class="image-event fade">
                     <MacOS title="Toadam.exe">
                         <div class="window-frame">
-                            <img
+                            <Image
                                 src="/assets/intro/active2.png"
                                 alt="Activity 3"
+                                width={560}
+                                height={312}
                             />
                         </div>
                     </MacOS>
@@ -106,9 +120,11 @@ import MacOS from "./MacOS";
                 <div class="image-event fade">
                     <MacOS title="Flashmob.exe">
                         <div class="window-frame">
-                            <img
+                            <Image
                                 src="/assets/intro/flashmob.jpg"
                                 alt="Activity 3"
+                                width={560}
+                                height={312}
                             />
                         </div>
                     </MacOS>
@@ -116,9 +132,11 @@ import MacOS from "./MacOS";
                 <div class="image-event fade">
                     <MacOS title="Trainghiem.exe">
                         <div class="window-frame">
-                            <img
+                            <Image
                                 src="/assets/intro/trainghiem.jpg"
                                 alt="Activity 3"
+                                width={560}
+                                height={312}
                             />
                         </div>
                     </MacOS>
@@ -134,6 +152,9 @@ import MacOS from "./MacOS";
         height: 312px;
         background-color: #282828;
         border-radius: 0 0 14px 14px;
+    }
+    .roboto-flex {
+        font-family: "Roboto Flex", sans-serif;
     }
     .window-frame img {
         width: 100%;

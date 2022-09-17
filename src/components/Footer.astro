@@ -1,3 +1,133 @@
 ---
 import { Icon } from "astro-icon";
+import { Image } from "@astrojs/image/components";
+import "@fontsource/roboto-flex";
+import "@fontsource/fresca";
+
+export interface Props {
+    logo?: string;
+}
+
+const { logo = "/assets/logo/logo2x.png" } = Astro.props;
 ---
+
+<section class="py-20 bg-white dark:bg-black">
+    <div class="max-w-screen-xl mx-auto space-y-8">
+        <div class="flex justify-between">
+            <div class="flex flex-col items-center space-y-8">
+                <div class="flex items-center space-x-28">
+                    <a href="/" class="flex items-center">
+                        <Image
+                            src={logo}
+                            width={30}
+                            height={30}
+                            alt="Anthony Hai Logo"
+                            class="text-2xl"
+                        />
+                        <span
+                            class="px-2 fresca text-black dark:text-white text-2xl"
+                            >AnthonyHai</span
+                        >
+                    </a>
+                </div>
+                <div
+                    class="flex items-center space-x-4 text-black dark:text-white"
+                >
+                    <a href="https://github.com/honghaianthony">
+                        <Icon
+                            size={16}
+                            pack="akar-icons"
+                            name="github-fill"
+                            aria-label="Github"
+                            target="_blank"
+                            rel="noopener"
+                        />
+                    </a>
+
+                    <a href="https://www.facebook.com/dangngohonghai/"
+                        ><Icon
+                            size={16}
+                            pack="akar-icons"
+                            name="facebook-fill"
+                            aria-label="Facebook"
+                            target="_blank"
+                            rel="noopener"
+                        />
+                    </a>
+                    <a href="https://www.instagram.com/anthony.haidang/"
+                        ><Icon
+                            size={16}
+                            pack="akar-icons"
+                            name="instagram-fill"
+                            aria-label="Instagram"
+                            target="_blank"
+                            rel="noopener"
+                        />
+                    </a>
+                    <a href="https://twitter.com/anthonyhaidang">
+                        <Icon
+                            size={16}
+                            pack="akar-icons"
+                            name="twitter-fill"
+                            aria-label="Twitter"
+                            target="_blank"
+                            rel="noopener"
+                        />
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-8 text-black dark:text-white">
+                <h1 class="roboto-flex font-semibold text-xl">Liên kết</h1>
+                <div class="roboto-flex flex flex-col space-y-4">
+                    <a href="/">Trang chủ</a>
+                    <a href="/">Cơ cấu tổ chức</a>
+                    <a href="/">Tin tức</a>
+                    <a href="/">Về tôi</a>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-8 text-black dark:text-white">
+                <h1 class="roboto-flex font-semibold text-xl">Sản phẩm</h1>
+                <div class="roboto-flex flex flex-col space-y-4">
+                    <a href="https://www.vivihandmade.com/">Vivi Handmade</a>
+                    <a href="https://dce2021.ml/">DCE2021</a>
+                    <a href="https://github.com/honghaianthony/sellphones-fe"
+                        >Sellphones</a
+                    >
+                    <a href="https://review-movie-uit.herokuapp.com/"
+                        >Review Movie</a
+                    >
+                </div>
+            </div>
+            <div class="flex flex-col space-y-8 text-black dark:text-white">
+                <h1 class="roboto-flex font-semibold text-xl">Portfolio</h1>
+                <div class="roboto-flex flex flex-col space-y-4">
+                    <a href="https://www.anthonyhai.tk/">Anthony Hai Official</a
+                    >
+                </div>
+            </div>
+        </div>
+        <hr class="text-[#484545]" />
+        <div class="flex justify-between">
+            <p class="dark:text-white text-black opacity-50">
+                @Anthony Hai Official
+            </p>
+            <div class="flex flex-col space-y-4">
+                <p class="dark:text-white text-black opacity-50">
+                    Copyright belongs to Anthony Hai
+                </p>
+                <p class="dark:text-white text-black opacity-50 text-right">
+                    &#169;{new Date().getFullYear()} All rights reserved
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .roboto-flex {
+        font-family: "Roboto Flex", sans-serif;
+    }
+    .fresca {
+        font-family: "Fresca", sans-serif;
+    }
+</style>

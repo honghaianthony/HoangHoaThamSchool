@@ -1,5 +1,6 @@
 ---
 import "@fontsource/arvo";
+import "@fontsource/roboto-flex";
 import { Image } from "@astrojs/image/components";
 export interface Props {
     title?: string;
@@ -22,12 +23,12 @@ const {
             <div class="flex w-1/2">
                 <div class="flex flex-col space-y-3">
                     <h1
-                        class="text-4xl text-black dark:text-white mb-2 arvo uppercase"
+                        class="text-4xl text-black dark:text-white mb-2 roboto-flex uppercase"
                     >
                         {title}
                     </h1>
                     <h1
-                        class="text-4xl text-black dark:text-white mb-5 arvo uppercase"
+                        class="text-4xl text-black dark:text-white mb-5 roboto-flex uppercase"
                     >
                         {slogan}
                     </h1>
@@ -77,5 +78,8 @@ const {
     }
     .arvo {
         font-family: "Arvo", serif;
+    }
+    .roboto-flex {
+        font-family: "Roboto Flex", sans-serif;
     }
 </style>
