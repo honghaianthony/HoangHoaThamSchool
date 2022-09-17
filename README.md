@@ -41,4 +41,4 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Thank you
 
-I am using images of my friends and logo - banner of some activities in my high school, I am appreciate if you can use your image with non-profit.
+I am using images of my friends and logo - banner of some activities in my high school, I am appreciate if I can use your image with non-profit.
