@@ -1,8 +1,4 @@
-# Welcome to [Astro](https://astro.build)
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+# Hoang Hoa Tham High School Landing Page by [AnthonyHai]
 
 ![basics](./thumbnail.png)
 
@@ -13,12 +9,12 @@ Inside of your Astro project, you'll see the following folders and files:
 ```
 /
 ├── public/
-│   └── favicon.svg
+│   └── assets/
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │
 │   ├── layouts/
-│   │   └── Layout.astro
+│   │
 │   └── pages/
 │       └── index.astro
 └── package.json
@@ -43,6 +39,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
 | `npm run astro --help` | Get help using the Astro CLI                       |
 
-## 👀 Want to learn more?
+## 👀 Thank you
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+I am using images of my friends, I am appreciate if you can use your image with non-profit.
