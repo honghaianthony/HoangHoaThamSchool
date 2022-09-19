@@ -2,6 +2,8 @@
 
 ![basics](./thumbnail.png)
 
+![Figma Design File](https://www.figma.com/file/Tgpuik0JTm6oABXGwlwFqO/HHT-ver2?node-id=0%3A1)
+
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
