@@ -7,8 +7,10 @@ import { Image } from "@astrojs/image/components";
 
 <section class="py-20 bg-white dark:bg-black">
     <div class="max-w-screen-xl mx-auto space-y-12">
-        <div class="flex space-x-24 text-black dark:text-white">
-            <div class="flex w-1/2">
+        <div
+            class="grid md:grid-cols-2 grid-cols-1 max-w-screen-xl mx-auto text-black dark:text-white space-y-8"
+        >
+            <div class="flex md:w-9/12">
                 <div class="flex flex-col space-y-4">
                     <h1 class="text-2xl roboto-flex font-bold">
                         Môi trường <span class="text-[#23B681]"
@@ -21,7 +23,7 @@ import { Image } from "@astrojs/image/components";
                     </p>
                 </div>
             </div>
-            <div class="relative w-1/2">
+            <div class="relative w-1/2 flex flex-wrap !mx-auto justify-center">
                 <MacOS title="Kyyeu.exe">
                     <Image
                         src="/assets/intro/active.png"
@@ -32,18 +34,10 @@ import { Image } from "@astrojs/image/components";
                 </MacOS>
             </div>
         </div>
-        <div class="flex space-x-24 text-black dark:text-white">
-            <div class="flex w-1/2">
-                <MacOS title="Giaovien.exe">
-                    <Image
-                        src="/assets/intro/active1.png"
-                        alt="Activity 2"
-                        width={560}
-                        height={312}
-                    />
-                </MacOS>
-            </div>
-            <div class="relative w-1/2">
+        <div
+            class="grid md:grid-cols-2 grid-cols-1 max-w-screen-xl mx-auto text-black dark:text-white space-y-8"
+        >
+            <div class="flex md:w-9/12">
                 <div class="flex flex-col space-y-4">
                     <h1 class="text-2xl roboto-flex font-bold">
                         Đội ngũ giáo viên <span class="text-[#EA4B19]"
@@ -57,9 +51,21 @@ import { Image } from "@astrojs/image/components";
                     </p>
                 </div>
             </div>
+            <div class="relative w-1/2 flex flex-wrap !mx-auto justify-center">
+                <MacOS title="Giaovien.exe">
+                    <Image
+                        src="/assets/intro/active1.png"
+                        alt="Activity 2"
+                        width={560}
+                        height={312}
+                    />
+                </MacOS>
+            </div>
         </div>
-        <div class="flex space-x-24 text-black dark:text-white">
-            <div class="flex w-1/2">
+        <div
+            class="grid md:grid-cols-2 grid-cols-1 max-w-screen-xl mx-auto text-black dark:text-white space-y-8"
+        >
+            <div class="flex md:w-9/12">
                 <div class="flex flex-col space-y-4">
                     <h1 class="text-2xl roboto-flex font-bold">
                         Tham gia nhiều <span class="text-[#F3B30E]"
@@ -104,7 +110,7 @@ import { Image } from "@astrojs/image/components";
                     </div>
                 </div>
             </div>
-            <div class="relative w-1/2">
+            <div class="relative w-1/2 flex flex-wrap !mx-auto justify-center">
                 <div class="image-event fade">
                     <MacOS title="Toadam.exe">
                         <div class="window-frame">

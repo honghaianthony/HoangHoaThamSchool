@@ -20,7 +20,7 @@ const {
 <section class="pt-16 pb-56 bg-white dark:bg-black">
     <div class="max-w-screen-xl mx-auto">
         <div class="flex items-center space-x-24 text-black dark:text-white">
-            <div class="flex w-1/2">
+            <div class="text-center md:text-left mx-auto md:flex md:w-1/2">
                 <div class="flex flex-col space-y-3">
                     <h1
                         class="text-4xl text-black dark:text-white mb-2 roboto-flex uppercase"
@@ -40,7 +40,7 @@ const {
                     </p>
                 </div>
             </div>
-            <div class="relative w-1/2">
+            <div class="hidden md:block md:relative md:w-1/2">
                 <Image
                     class="mx-auto rounded-3xl shadow-2xl"
                     src="/assets/background/banner1.jpg"
@@ -71,7 +71,7 @@ const {
 <style>
     section {
         background-image: url("/assets/background/connection2x.png");
-        background-size: 80%;
+        background-size: contain;
         background-repeat: no-repeat;
         background-position: right 150px;
         background-origin: content-box, padding-box;

@@ -9,9 +9,11 @@ import "@fontsource/arvo";
 >
     <div class="max-w-screen-xl mx-auto space-y-5">
         <h1 class="arvo text-black dark:text-white">Với sự hỗ trợ của</h1>
-        <div class="flex items-center space-x-24 justify-between">
+        <div
+            class="grid md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-4 max-w-5xl mx-auto"
+        >
             <div
-                class="flex rounded-xl w-[194px] h-[105px] bg-support items-center border"
+                class="flex rounded-xl w-[194px] h-[105px] bg-support items-center border space-y-4"
             >
                 <Image
                     src="/assets/supporter/astro.png"
@@ -22,7 +24,7 @@ import "@fontsource/arvo";
                 />
             </div>
             <div
-                class="flex rounded-xl w-[194px] h-[105px] bg-support items-center border"
+                class="flex rounded-xl w-[194px] h-[105px] bg-support items-center border space-y-4"
             >
                 <Image
                     src="/assets/supporter/tailwind.png"

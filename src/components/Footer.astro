@@ -13,7 +13,9 @@ const { logo = "/assets/logo/logo2x.png" } = Astro.props;
 
 <section class="py-20 bg-white dark:bg-black">
     <div class="max-w-screen-xl mx-auto space-y-8">
-        <div class="flex justify-between">
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-screen-xl mx-auto"
+        >
             <div class="flex flex-col items-center space-y-8">
                 <div class="flex items-center space-x-28">
                     <a href="/" class="flex items-center">
@@ -76,18 +78,22 @@ const { logo = "/assets/logo/logo2x.png" } = Astro.props;
                     </a>
                 </div>
             </div>
-            <div class="flex flex-col space-y-8 text-black dark:text-white">
+            <div
+                class="flex flex-col items-center space-y-8 text-black dark:text-white"
+            >
                 <h1 class="roboto-flex font-semibold text-xl">Liên kết</h1>
-                <div class="roboto-flex flex flex-col space-y-4">
+                <div class="roboto-flex items-center flex flex-col space-y-4">
                     <a href="/">Trang chủ</a>
                     <a href="/">Cơ cấu tổ chức</a>
                     <a href="/">Tin tức</a>
                     <a href="/">Về tôi</a>
                 </div>
             </div>
-            <div class="flex flex-col space-y-8 text-black dark:text-white">
+            <div
+                class="flex flex-col items-center space-y-8 text-black dark:text-white"
+            >
                 <h1 class="roboto-flex font-semibold text-xl">Sản phẩm</h1>
-                <div class="roboto-flex flex flex-col space-y-4">
+                <div class="roboto-flex items-center flex flex-col space-y-4">
                     <a href="https://www.vivihandmade.com/">Vivi Handmade</a>
                     <a href="https://dce2021.ml/">DCE2021</a>
                     <a href="https://github.com/honghaianthony/sellphones-fe"
@@ -98,20 +104,24 @@ const { logo = "/assets/logo/logo2x.png" } = Astro.props;
                     >
                 </div>
             </div>
-            <div class="flex flex-col space-y-8 text-black dark:text-white">
+            <div
+                class="flex flex-col items-center space-y-8 text-black dark:text-white"
+            >
                 <h1 class="roboto-flex font-semibold text-xl">Portfolio</h1>
-                <div class="roboto-flex flex flex-col space-y-4">
+                <div class="roboto-flex items-center flex flex-col space-y-4">
                     <a href="https://www.anthonyhai.tk/">Anthony Hai Official</a
                     >
                 </div>
             </div>
         </div>
         <hr class="text-[#484545]" />
-        <div class="flex justify-between">
-            <p class="dark:text-white text-black opacity-50">
+        <div class="flex flex-col md:flex-row justify-between">
+            <p
+                class="dark:text-white text-center md:text-left text-black opacity-50"
+            >
                 @Anthony Hai Official
             </p>
-            <div class="flex flex-col space-y-4">
+            <div class="flex items-center flex-col space-y-4">
                 <p class="dark:text-white text-black opacity-50">
                     Copyright belongs to Anthony Hai
                 </p>

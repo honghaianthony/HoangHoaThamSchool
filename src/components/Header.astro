@@ -31,7 +31,7 @@ const { logo = "/assets/logo/logo2x.png" } = Astro.props;
                     >
                 </a>
             </div>
-            <div class="flex items-center space-x-14">
+            <div class="hidden md:flex items-center space-x-14">
                 <ul class="flex space-x-4">
                     <li
                         class="flex items-center px-3 lg:text-black lg:dark:text-white hover:text-white hover:bg-slate-800 hover:py-1 hover:rounded-lg hover:transition-all cursor-pointer text-sm"
@@ -74,6 +74,67 @@ const { logo = "/assets/logo/logo2x.png" } = Astro.props;
                     </li>
                 </ul>
             </div>
+            <div class="md:hidden flex items-center">
+                <button class="outline-none mobile-menu-button mr-4">
+                    <svg
+                        class="w-6 h-6 text-gray-500 hover:text-green-500 dark:text-white"
+                        x-show="!showMenu"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="hidden mobile-menu mt-4">
+            <ul>
+                <li
+                    class="block text-sm px-2 py-4 text-black dark:text-white bg-green-500 active font-semibold"
+                >
+                    <HeaderLink href="/">Trang chủ</HeaderLink>
+                </li>
+                <li
+                    class="block text-sm px-2 py-4 text-black dark:text-white hover:bg-green-500 transition duration-300"
+                >
+                    <HeaderLink href="/">Cơ cấu tổ chức</HeaderLink>
+                </li>
+                <li
+                    class="block text-sm px-2 py-4 text-black dark:text-white hover:bg-green-500 transition duration-300"
+                >
+                    <HeaderLink href="/">Tin tức</HeaderLink>
+                </li>
+                <li
+                    class="block text-sm px-2 py-4 text-black dark:text-white hover:bg-green-500 transition duration-300"
+                >
+                    <HeaderLink href="/">Về tôi</HeaderLink>
+                </li>
+                <div class="flex space-x-4 justify-end">
+                    <li
+                        class="flex items-center px-3 lg:text-black lg:dark:text-white cursor-pointer text-sm"
+                    >
+                        <ThemeToggle client:load />
+                    </li>
+                    <li
+                        class="flex items-center px-3 lg:text-black lg:dark:text-white cursor-pointer text-sm"
+                    >
+                        <a href="https://github.com/honghaianthony">
+                            <Icon
+                                size={16}
+                                pack="akar-icons"
+                                name="github-fill"
+                                aria-label="Github"
+                                target="_blank"
+                                rel="noopener"
+                            />
+                        </a>
+                    </li>
+                </div>
+            </ul>
         </div>
     </nav>
 </header>
@@ -90,3 +151,12 @@ const { logo = "/assets/logo/logo2x.png" } = Astro.props;
         );
     }
 </style>
+
+<script>
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+
+    btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+</script>
