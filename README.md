@@ -2,7 +2,7 @@
 
 ![basics](./thumbnail.png)
 
-![Figma Design File](https://www.figma.com/file/Tgpuik0JTm6oABXGwlwFqO/HHT-ver2?node-id=0%3A1)
+Figma design file [Figma](https://www.figma.com/file/Tgpuik0JTm6oABXGwlwFqO/HHT-ver2?node-id=0%3A1).
 
 ## 🚀 Project Structure
 
