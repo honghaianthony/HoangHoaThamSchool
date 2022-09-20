@@ -19,6 +19,8 @@ export default function ThemeToggle() {
     }, [theme]);
 
     return (
-        <button onClick={handleClick}>{theme === "light" ? "🌙" : "🌞"}</button>
+        <button onClick={handleClick} suppressHydrationWarning>
+            {theme === "light" ? "🌙" : "🌞"}
+        </button>
     );
 }
