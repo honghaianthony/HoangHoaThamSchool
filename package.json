@@ -17,7 +17,7 @@
     "@fontsource/arvo": "^4.5.6",
     "@fontsource/fresca": "^4.5.9",
     "@fontsource/roboto-flex": "^4.5.2",
-    "astro": "^1.4.0",
+    "astro": "^1.6.7",
     "astro-icon": "^0.7.3",
     "astro-seo": "^0.6.0",
     "react": "^18.2.0",
