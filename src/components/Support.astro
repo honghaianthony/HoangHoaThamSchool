@@ -13,7 +13,7 @@ import "@fontsource/arvo";
             class="grid md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-4 max-w-5xl mx-auto"
         >
             <div
-                class="flex rounded-xl w-[194px] h-[105px] bg-support items-center border space-y-4"
+                class="flex rounded-xl w-[194px] h-[105px] bg-support-light dark:bg-support items-center border space-y-4"
             >
                 <Image
                     src="/assets/supporter/astro.png"
@@ -24,7 +24,7 @@ import "@fontsource/arvo";
                 />
             </div>
             <div
-                class="flex rounded-xl w-[194px] h-[105px] bg-support items-center border space-y-4"
+                class="flex rounded-xl w-[194px] h-[105px] bg-support-light dark:bg-support items-center border space-y-4"
             >
                 <Image
                     src="/assets/supporter/tailwind.png"
@@ -35,7 +35,7 @@ import "@fontsource/arvo";
                 />
             </div>
             <div
-                class="flex rounded-xl w-[194px] h-[105px] bg-support items-center border"
+                class="flex rounded-xl w-[194px] h-[105px] bg-support-light dark:bg-support items-center border"
             >
                 <Image
                     src="/assets/supporter/supabase.png"
@@ -55,6 +55,14 @@ import "@fontsource/arvo";
             111.53deg,
             #bc1b42 29.93%,
             rgba(221, 197, 203, 0) 63.12%
+        );
+    }
+
+    .bg-support-light {
+        background: linear-gradient(
+            93.43deg,
+            rgba(233, 15, 93, 0.8) 47.17%,
+            rgba(0, 0, 0, 0.8) 94.66%
         );
     }
     .arvo {
