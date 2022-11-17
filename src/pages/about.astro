@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
+---
+
+<Layout title="Về tôi">
+    <section class="pt-16 pb-56 bg-white dark:bg-black">
+        <div class="max-w-screen-xl mx-auto">
+            <h1
+                class="text-black dark:text-white font-bold text-center pt-4 pb-12 text-4xl"
+            >
+                Về tôi
+            </h1>
+            <div
+                class="flex flex-col items-center md:flex-row justify-center p-4 md:space-x-24 mx-auto max-w-4xl"
+            >
+                <Image
+                    src="/assets/about/avatar.jpg"
+                    width={231}
+                    height={323}
+                    alt="Về tôi"
+                    class="rounded-lg"
+                />
+                <div
+                    class="flex flex-col space-y-12 py-8 text-center md:text-start"
+                >
+                    <div class="flex flex-start flex-col space-y-2 roboto-flex">
+                        <h1 class="font-semibold text-[#F3B30E] text-2xl">
+                            Đặng Ngô Hồng Hải
+                        </h1>
+                        <p class="font-semibold text-black dark:text-white">
+                            Developer
+                        </p>
+                    </div>
+                    <p
+                        class="roboto text-black dark:text-white font-bold block"
+                    >
+                        Hello các bạn, mình là Hải. Các bạn có thể gọi mình là
+                        Anthony Hai. Hiện mình đang là sinh viên tại Trường Đại
+                        học Công nghệ Thông Tin - ĐHQG HCM. Mình làm ra trang
+                        web này với mong muốn đem đến một sự mới mẻ trong trang
+                        web trường học. Trang này có sử dụng một số hình ảnh của
+                        lớp mình và một số hoạt động khác, mình rất vui và cảm
+                        thấy cảm ơn các bạn khi sử dụng hình ảnh của các bạn với
+                        phi lợi nhuận
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .roboto-flex {
+        font-family: "Roboto Flex", sans-serif;
+    }
+
+    .roboto {
+        font-family: "Roboto", sans-serif;
+    }
+</style>
